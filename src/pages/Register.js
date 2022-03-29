@@ -3,11 +3,11 @@ import { React, useState, useEffect, useContext } from "react";
 import MainLayout from "../layouts/MainLayouts";
 import { useNavigate } from "react-router-dom";
 
-import { signin } from "../apis";
+import { register } from "../apis";
 
 import AuthContext from "../contexts/AuthContex";
 
-function Login() {
+function Register() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -21,7 +21,7 @@ function Login() {
   });
 
   const onSubmit = () => {
-    auth.signIn(username, password, () => history("/places"));
+    auth.register(username, password, () => history("/places"));
   };
   return (
     <MainLayout>
@@ -30,7 +30,7 @@ function Login() {
           <Card>
             <Card.Body>
               <h3 className="text-center">
-                <b>LOGIN</b>
+                <b>REGISTER</b>
               </h3>
 
               <Form.Group>
@@ -70,7 +70,7 @@ function Login() {
                     aria-hidden="true"
                   />
                 ) : (
-                  "Sign In"
+                  "Register"
                 )}
               </Button>
             </Card.Body>
@@ -81,4 +81,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Register;

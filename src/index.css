@@ -7,11 +7,26 @@ body {
 }
 
 .btn-standard {
-  background-color: #ff3366;
+  /* background-color: #ff3366; */
+  /* background-color: #2b42d4; */
+  /* background-color: #00a170; */
+  background-color: #673ab7;
   color: #fff;
 }
 
 .btn-standard:hover {
-  background-color: #fc285d;
+  /* background-color: #fc285d; */
+  /* background-color: #008059; */
+  background-color: #6b5b95;
   color: #fff;
+}
+
+.btn-lightgray {
+  background-color: #f0f3f5;
+  color: #000;
+}
+
+.btn-lightgray:hover {
+  background-color: #edeff0;
+  color: #000;
 }
