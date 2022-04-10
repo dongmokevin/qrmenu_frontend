@@ -66,6 +66,10 @@ const Menu = () => {
     });
   };
 
+  const onPaymentDone = () => {
+    setShoppingCart({});
+    setShowShoppingCart(false);
+  };
   const totalQuantity = useMemo(
     () =>
       Object.keys(shoppingCart)
@@ -89,6 +93,7 @@ const Menu = () => {
                 .filter((item) => item.quantity > 0)}
               onAdd={onAddItemToShoppingCart}
               onRemove={onRemoveItemToShoppingCart}
+              onPaymentDone={onPaymentDone}
             />
           ) : (
             <MenuList
